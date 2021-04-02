@@ -43,9 +43,8 @@ function run() {
     const pluginName = core.getInput('plugin-name');
     const pluginFile = pluginName + '.php';
     const pluginInfo = parsePluginInfoComment(pluginFile);
-    const lastCommit = github.context.commits[github.context.commits.length - 1];
 
-    pluginInfo.last_updated = lastCommit.timestamp;
+    pluginInfo.last_updated = github.context.payload.head_commit.timestamp;
     pluginInfo.last_commit = github.context.sha;
 
     const pluginInfoJson = JSON.stringify(pluginInfo, undefined, 2);
