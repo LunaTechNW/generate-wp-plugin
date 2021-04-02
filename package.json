@@ -1,0 +1,21 @@
+{
+  "name": "generate-wp-plugin-manifest",
+  "version": "1.0.0",
+  "description": "GitHub Action that generates a json file containing update info for a WP Plugin",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterlama/generate-wp-plugin-manifest.git"
+  },
+  "keywords": [],
+  "author": "Peter Lama",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peterlama/generate-wp-plugin-manifest/issues"
+  },
+  "homepage": "https://github.com/peterlama/generate-wp-plugin-manifest#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0"
+  }
+}

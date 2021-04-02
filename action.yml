@@ -1,0 +1,12 @@
+name: 'Generate WP Plugin Manifest'
+description: 'Generate a json file containing update info for a WP Plugin'
+inputs:
+  plugin-name:
+    description: 'Directory name of the wordpress plugin'
+    required: true
+  file:
+    description: 'Path of json file to write to'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
