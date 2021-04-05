@@ -39,13 +39,15 @@ function parsePluginInfoComment(pluginFile) {
 
 function run() {
   try {
-    const outputFile = core.getInput('file');
+    const outputFile = core.getInput('output-file');
     const pluginName = core.getInput('plugin-name');
     const pluginFile = pluginName + '.php';
     const pluginInfo = parsePluginInfoComment(pluginFile);
 
     pluginInfo.last_updated = github.context.payload.head_commit.timestamp;
     pluginInfo.last_commit = github.context.sha;
+    pluginInfo.build_number = github.context.run_number;
+    pluginInfo.package_file = core.getInput('package-file');
 
     const pluginInfoJson = JSON.stringify(pluginInfo, undefined, 2);
     fs.writeFileSync(outputFile, pluginInfoJson);

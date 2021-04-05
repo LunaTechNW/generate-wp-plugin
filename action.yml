@@ -4,9 +4,13 @@ inputs:
   plugin-name:
     description: 'Directory name of the wordpress plugin'
     required: true
-  file:
+  output-file:
     description: 'Path of json file to write to'
     required: true
+  package-file:
+    description: 'File name of the current zip archive of this wordpress plugin'
+    required: false
+    default: ''
 runs:
   using: 'node12'
   main: 'index.js'
