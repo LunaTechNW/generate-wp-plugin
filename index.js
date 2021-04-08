@@ -48,6 +48,7 @@ function run() {
     pluginInfo.last_commit = github.context.sha;
     pluginInfo.build_number = github.context.run_number;
     pluginInfo.package_file = core.getInput('package-file');
+    console.log(pluginInfo);
 
     const pluginInfoJson = JSON.stringify(pluginInfo, undefined, 2);
     fs.writeFileSync(outputFile, pluginInfoJson);
