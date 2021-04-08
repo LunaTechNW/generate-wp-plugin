@@ -46,7 +46,7 @@ function run() {
 
     pluginInfo.last_updated = github.context.payload.head_commit.timestamp;
     pluginInfo.last_commit = github.context.sha;
-    pluginInfo.build_number = github.context.run_number;
+    pluginInfo.build_number = github.context.runNumber;
     pluginInfo.package_file = core.getInput('package-file');
     console.log(pluginInfo);
 
