@@ -4,7 +4,7 @@ const github = require('@actions/github');
 
 function parsePluginInfoComment(pluginFile) {
   const pluginFileContent = fs.readFileSync(pluginFile, 'utf8');
-  const pluginInfoBlockRegex = /^<\?php\s*\/\*\s(.*?)\*\//s; // match <?php /*...*/
+  const pluginInfoBlockRegex = /^<\?php\s*\/\*\*?\s(.*?(?=\*\/))/s; // match <?php /*...*/
   const pluginInfoLineRegex = /^\s\*\s([\w\s]+):\s*(.*)/gm; // match * Some Field: value
   const regexResult = pluginInfoBlockRegex.exec(pluginFileContent);
 
