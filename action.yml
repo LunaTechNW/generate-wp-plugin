@@ -4,6 +4,9 @@ inputs:
   plugin-name:
     description: 'Directory name of the wordpress plugin'
     required: true
+  theme-name:
+    description: 'Directory name of the wordpress theme'
+    required: false
   output-file:
     description: 'Path of json file to write to'
     required: true
