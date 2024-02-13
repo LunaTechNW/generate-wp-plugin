@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://tobinfekkes:537bcd2bf25c8d0b04895120b36ca9935b78d937@github.com/LunaTechNW/generate-wp-plugin.git"
+    "url": "git+https://github.com/LunaTechNW/generate-wp-plugin.git"
   },
   "keywords": [],
   "author": "Tobin Fekkes",
